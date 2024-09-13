@@ -11,7 +11,7 @@
     </div>
     
     <!-- Personal introduction and social icons -->
-    <div class="mt-28 md:order-1">
+    <div class="mt-32 md:order-1">
       <div class="text-white">
         <p class="text-3xl mb-8">Hi, I'm</p>
         <p

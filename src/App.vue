@@ -1,20 +1,23 @@
 <template>
   <NavbarPage ></NavbarPage>
-  <HomePage ></HomePage>
-  <AboutPage ></AboutPage>
+  <HomePage class="mb-20"></HomePage>
+  <AboutPage class="relative mb-52" ></AboutPage>
+  <ProjectPage></ProjectPage>
 </template>
 
 <script>
 import NavbarPage from "./Layouts/NavbarPage.vue"
 import HomePage from "./components/HomePage.vue";
 import AboutPage from "./components/AboutPage.vue";
+import ProjectPage from "./components/ProjectPage.vue";
 
 export default {
   name: 'App',
   components: {
     NavbarPage,
     HomePage,
-    AboutPage
+    AboutPage,
+    ProjectPage
   }
 }
 </script>
