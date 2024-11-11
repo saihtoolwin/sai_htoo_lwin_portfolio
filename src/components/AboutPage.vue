@@ -30,7 +30,7 @@
       <!-- Second Experience -->
       <li class="relative">
         <div class="absolute w-3 h-3 bg-primary rounded-full left-[-31px] top-2"></div>
-        <p class="opacity-50">2023 Jan - Jun</p>
+        <p class="opacity-50">2022 Oct - 2023 Jun</p>
         <p class="font-bold">Junior Backend Developer 
           <span class="opacity-50">at Impact Tech Software Solutions</span>
         </p>
