@@ -131,11 +131,12 @@
         </div>
       </div>
       </div>
-    </div>
-    <div class="flex justify-end mt-4 mr-9" >
+      <div class="flex justify-end mt-4 " >
         <a href="https://github.com/saihtoolwin?tab=repositories" target="_blank">
         <p class="text-gray-400 hover:text-white mt-3">More Projects ></p>
       </a>
+    </div>
+    
   </div>
 </template>
 
