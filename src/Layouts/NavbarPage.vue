@@ -23,17 +23,6 @@
             clip-rule="evenodd"
           ></path>
         </svg>
-
-        <!-- Dark mode icon -->
-        <!-- <svg
-          v-else
-          class="transition-transform duration-500 fill-yellow-500"
-          :class="isDarkMode ? 'rotate-180' : 'rotate-0'"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-         
-        </svg> -->
       </button>
       <div
         class="w-12 h-12 border-2 border-white bg-slate-600 transition-all duration-300 hover:cursor-pointer rounded-full hover:rounded-lg hover:w-[150px] flex justify-center items-center relative group"
@@ -59,14 +48,14 @@ import { ref, onMounted } from 'vue';
 const isDarkMode = ref(false);
 
 function toggleTheme() {
-  console.log("Toggling");
   isDarkMode.value = !isDarkMode.value;
   document.documentElement.classList.toggle('dark', isDarkMode.value);
   localStorage.setItem('theme', isDarkMode.value ? 'dark' : 'light');
 }
 
 onMounted(() => {
-  isDarkMode.value = localStorage.getItem('theme') === 'dark';
+  const savedTheme = localStorage.getItem('theme');
+  isDarkMode.value = savedTheme === 'dark';
   document.documentElement.classList.toggle('dark', isDarkMode.value);
 });
 </script>

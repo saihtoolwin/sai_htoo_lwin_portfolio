@@ -41,6 +41,7 @@
 </template>
 <script setup></script>
 <style scoped>
+
 .textShadow {
   color: #33FFCC;
   text-shadow: 0 0 5px #33FFCC, 0 0 20px #33FFCC, 0 0 20px #33FFCC,

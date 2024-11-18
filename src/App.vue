@@ -1,10 +1,11 @@
 <template>
-  <NavbarPage ></NavbarPage>
-  <HomePage class="mb-20"></HomePage>
-  <AboutPage class="relative mb-52" ></AboutPage>
-  <ProjectPage></ProjectPage>
+  <div class="bg-bgcolor dark:bg-white text-white dark:text-black">
+    <NavbarPage></NavbarPage>
+    <HomePage class="mb-20"></HomePage>
+    <AboutPage class="relative mb-52"></AboutPage>
+    <ProjectPage></ProjectPage>
+  </div>
 </template>
-
 <script>
 import NavbarPage from "./Layouts/NavbarPage.vue"
 import HomePage from "./components/HomePage.vue";
@@ -25,7 +26,7 @@ export default {
 <style>
 body{
   @apply font-suse;
-  background-color: #102129;
+  /* background-color: #102129; */
   /* overflow: hidden; */
 }
 </style>

@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors:{
         secondary : '#33FFCC',
-        // secondary:"##00B7FF",
+        bgcolor:"#102129",
         primary:"#00B7FF"
       },
       fontFamily: {
@@ -14,5 +14,6 @@ module.exports = {
       },
     },
   },
+  darkMode: 'class',
   plugins: [],
 }
