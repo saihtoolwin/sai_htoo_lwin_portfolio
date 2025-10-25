@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto px-4 mt-4">
-    <p class="text-white font-bold text-3xl">Technology Stack</p>
+    <!-- <p class="text-white font-bold text-3xl">Technology Stack</p>
 
     <div class="grid grid-cols-8 gap-12 mt-10">
       <div
@@ -16,7 +16,7 @@
         ></i>
         <p class="text-white mt-2">{{ tech.name }}</p>
       </div>
-    </div>
+    </div> -->
   </div>
   <div class="container mx-auto px-4 mt-4 text-white">
     <p class=" font-bold text-3xl text-gray-500 hover:text-white duration-300 my-10">Projects</p>

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-24 flex justify-end lg:container mx-auto px-4">
+  <div class="w-full h-24 flex justify-end lg:container mx-auto px-4 py-3">
     <div class="flex">
       <button
         @click="toggleTheme"
@@ -45,7 +45,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const isDarkMode = ref(false);
+const isDarkMode = ref(true);
 
 function toggleTheme() {
   isDarkMode.value = !isDarkMode.value;
