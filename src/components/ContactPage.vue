@@ -1,103 +1,87 @@
 <template>
-  <div class="min-h-screen  dark:bg-gray-900 flex items-center justify-center px-6 py-12">
-    <div class="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12 transition-all duration-300">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-8">
+  <div class=" bg-gradient-to-br from-slate-900 to-gray-900 flex items-center justify-center p-6 mt-3 flex-col">
+    <div class="max-w-3xl w-full bg-gray-700/40 rounded-xl shadow-md p-8">
+      
+      <!-- Header -->
+      <h1 class="text-3xl font-bold text-center text-white dark:text-white mb-8">
         Contact Me
-      </h2>
+      </h1>
+      <p class="text-center text-white mb-8">
+        Have a question or want to work together? Fill out the form and I'll get back to you as soon as possible!
+      </p>
 
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 gap-8 bg-gray-700/40 px-6 py-7 rounded-lg">
         <!-- Contact Info -->
-        <div class="flex flex-col  space-y-6">
+        <div class="space-y-6">
           <div class="flex items-center space-x-4">
-            <div class="p-4 bg-blue-100 dark:bg-blue-900/40 rounded-full">
-              <i class="fa-solid fa-phone text-blue-600 dark:text-blue-400 text-xl"></i>
-            </div>
-            <div>
-              <p class="text-gray-600 dark:text-gray-300">Phone</p>
-              <p class="font-semibold text-gray-900 dark:text-white">+95 9 123 456 789</p>
-            </div>
+            <i class="fa-solid fa-phone text-white dark:text-gray-300 text-xl"></i>
+            <span class="text-white dark:text-white font-medium">+95 9 123 456 789</span>
           </div>
 
           <div class="flex items-center space-x-4">
-            <div class="p-4 bg-green-100 dark:bg-green-900/40 rounded-full">
-              <i class="fa-solid fa-envelope text-green-600 dark:text-green-400 text-xl"></i>
-            </div>
-            <div>
-              <p class="text-gray-600 dark:text-gray-300">Email</p>
-              <p class="font-semibold text-gray-900 dark:text-white">saihtoolwin66@gmail.com</p>
-            </div>
+            <i class="fa-solid fa-envelope text-white dark:text-gray-300 text-xl"></i>
+            <span class="text-white dark:text-white font-medium">saihtoolwin66@gmail.com</span>
           </div>
 
           <div class="flex items-center space-x-4">
-            <div class="p-4 bg-purple-100 dark:bg-purple-900/40 rounded-full">
-              <i class="fa-solid fa-location-dot text-purple-600 dark:text-purple-400 text-xl"></i>
-            </div>
-            <div>
-              <p class="text-gray-600 dark:text-gray-300">Address</p>
-              <p class="font-semibold text-gray-900 dark:text-white">Yangon, Myanmar</p>
-            </div>
+            <i class="fa-solid fa-location-dot text-white dark:text-gray-300 text-xl"></i>
+            <span class="text-white dark:text-white font-medium">Yangon, Myanmar</span>
           </div>
         </div>
 
         <!-- Contact Form -->
-        <form @submit.prevent="submitForm" class="space-y-5">
-          <div>
-            <label class="block text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
-            <input
-              v-model="form.name"
-              type="text"
-              required
-              class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700  dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
-          </div>
+        <form @submit.prevent="submitForm" class="space-y-4">
+          <input
+            v-model="form.name"
+            type="text"
+            placeholder="Your Name"
+            required
+            class="w-full p-3 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-sky-400 focus:outline-none"
+          />
 
-          <div>
-            <label class="block text-gray-700 dark:text-gray-300 mb-2">Email</label>
-            <input
-              v-model="form.email"
-              type="email"
-              required
-              class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700  dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
-          </div>
+          <input
+            v-model="form.email"
+            type="email"
+            placeholder="Email"
+            required
+            class="w-full p-3 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-sky-400 focus:outline-none"
+          />
 
-          <div>
-            <label class="block text-gray-700 dark:text-gray-300 mb-2">Message</label>
-            <textarea
-              v-model="form.message"
-              rows="5"
-              required
-              class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700  dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            ></textarea>
-          </div>
+          <textarea
+            v-model="form.message"
+            rows="4"
+            placeholder="Message"
+            required
+            class="w-full p-3 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-sky-400 focus:outline-none"
+          ></textarea>
 
           <button
             type="submit"
-            class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition duration-200"
+            class="w-full py-2 rounded bg-sky-900 text-white dark:text-gray-900 font-medium hover:bg-gray-700 dark:hover:bg-gray-300 transition"
           >
-            Send Message
+            Send
           </button>
         </form>
       </div>
     </div>
+    <div class="container mx-auto flex justify-end my-3 text-gray-400">
+    Made with ❤️ by Sai Htoo Lwin
   </div>
+  </div>
+  
 </template>
 
 <script>
 export default {
-  name: "ContactMePage",
+  name: "SimpleContactPage",
   data() {
     return {
-      form: {
-        name: "",
-        email: "",
-        message: "",
-      },
+      form: { name: "", email: "", message: "" },
     };
   },
   methods: {
     submitForm() {
-      alert(`Thank you, ${this.form.name}! Your message has been sent.`);
+      alert(`Thanks, ${this.form.name}! Your message has been sent.`);
       this.form = { name: "", email: "", message: "" };
     },
   },
@@ -105,9 +89,9 @@ export default {
 </script>
 
 <style scoped>
-/* Optional animations for smooth hover/focus */
 input,
-textarea {
-  transition: all 0.3s ease;
+textarea,
+button {
+  transition: all 0.2s ease;
 }
 </style>

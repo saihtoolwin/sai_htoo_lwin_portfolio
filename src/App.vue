@@ -2,7 +2,7 @@
   <div class=" bg-gradient-to-br from-slate-900 to-gray-900 dark:bg-white text-white dark:text-black">
     <NavbarPage></NavbarPage>
     <HomePage class="mb-16"></HomePage>
-    <AboutPage class="relative mb-52"></AboutPage>
+    <AboutPage class="relative "></AboutPage>
     <ProjectPage></ProjectPage>
     <ContactPage></ContactPage>
   </div>
