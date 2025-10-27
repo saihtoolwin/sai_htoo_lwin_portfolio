@@ -1,173 +1,186 @@
 <template>
-  <div class="container mx-auto px-4 mt-4">
-    <!-- <p class="text-white font-bold text-3xl">Technology Stack</p>
+  <div class="container mx-auto  mt-8 text-white px-3">
+    <div class="p-3 md:p-6 bg-gray-700/40 px-5 rounded-2xl">
+      <p class=" font-bold text-3xl duration-300 ">Projects</p>
+      <div class="w-full flex justify-center mb-10">
+        <ul class="flex   backdrop-blur-md bg-gray-700/40 rounded-3xl border border-gray-700/30 ">
+          <li v-for="tab in tabs" :key="tab" @click="activeTab = tab"
+            class="relative cursor-pointer select-none px-4 py-2 text-md font-medium rounded-2xl  transition-all duration-300"
+            :class="[
+              activeTab === tab
+                ? ''
+                : 'text-gray-400 hover:text-white hover:bg-gray-700/40'
+            ]">
+            {{ tab }}
+            <span v-if="activeTab === tab"
+              class="absolute inset-x-0 -bottom-1 mx-auto w-2/3 h-[3px] bg-gray-200 rounded-full animate-pulse"></span>
+          </li>
+        </ul>
+      </div>
 
-    <div class="grid grid-cols-8 gap-12 mt-10">
-      <div
-        v-for="(tech, index) in techStack"
-        :key="index"
-        class="flex flex-col items-center animate-wave"
-        :style="{ animationDelay: `${index * 0.2}s` }"
-      >
-        <i
-          :class="tech.icon"
-          :style="{ color: tech.color }"
-          class="text-4xl"
-        ></i>
-        <p class="text-white mt-2">{{ tech.name }}</p>
+      <div v-if="activeTab == 'Web'" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 sm:mx-auto md:gap-5   ">
+        <!-- Card 1 -->
+        <div
+          class="h-full flex flex-col px-4 py-2 rounded-xl overflow-hidden bg-gray-700/40 transform hover:scale-105 transition duration-300 motion-reduce:transform-none">
+
+          <!-- Top content -->
+          <div class=" flex-grow mb-2">
+            <div class="font-bold text-lg mb-2">Learning Management System</div>
+            <div class="text-gray-300 text-md mt-1">
+              A modern web-based Learning Management System designed for educators and learners, focusing on course
+              management, interactive learning, and scalable performance. Built for security, flexibility, and seamless
+              user experience.
+            </div>
+
+          </div>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <!-- Bootstrap -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" class="w-8 h-8 p-1 object-contain bg-gray-700/40 rounded-lg border border-gray-600/40
+      hover:border-[#7952b3] transition-all duration-300 hover:scale-110" alt="Bootstrap">
+
+            <!-- Vue -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" class="w-8 h-8 p-1 object-contain bg-gray-700/40 rounded-lg border border-gray-600/40
+      hover:border-[#42b883] transition-all duration-300 hover:scale-110" alt="Vue" />
+
+            <!-- PHP -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" class="w-8 h-8 p-1 object-contain bg-gray-700/40 rounded-lg border border-gray-600/40
+      hover:border-[#8892be] transition-all duration-300 hover:scale-110" alt="PHP">
+
+            <!-- Laravel -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Laravel"
+              class="w-8 h-8 p-1 object-contain bg-gray-700/40 rounded-lg border border-gray-600/40 hover:border-red-500 transition-all duration-300" />
+          </div>
+          <!-- Bottom link -->
+          <div class="mt-auto  py-2 text-right">
+            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold"
+              target="_blank" rel="noopener noreferrer">
+              See More ....
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="h-full flex flex-col px-4 py-2 rounded-xl overflow-hidden bg-gray-700/40 transform hover:scale-105 transition duration-300 motion-reduce:transform-none">
+
+          <!-- Top content -->
+          <div class=" flex-grow mb-2">
+            <div class="font-bold text-lg mb-2">BookReview System</div>
+            <div class="text-gray-300 text-md mt-1">
+              BookReview System where users can browse, download, and review books. The platform
+              focuses on user-friendly navigation, secure downloads, and interactive reviews, making it easy for readers
+              to share and discover content. Built for scalability, flexibility, and seamless reading experience.
+            </div>
+
+          </div>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <!-- Bootstrap -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" class="w-8 h-8 p-1 object-contain bg-gray-700/40 rounded-lg border border-gray-600/40
+      hover:border-[#7952b3] transition-all duration-300 hover:scale-110" alt="Bootstrap">
+
+            <!-- PHP -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" class="w-8 h-8 p-1 object-contain bg-gray-700/40 rounded-lg border border-gray-600/40
+      hover:border-[#8892be] transition-all duration-300 hover:scale-110" alt="PHP">
+
+
+          </div>
+          <!-- Bottom link -->
+          <div class="mt-auto  py-2 text-right">
+            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold"
+              target="_blank" rel="noopener noreferrer">
+              See More ....
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="h-full flex flex-col px-4 py-2 rounded-xl overflow-hidden bg-gray-700/40 transform hover:scale-105 transition duration-300 motion-reduce:transform-none">
+
+          <!-- Top content -->
+          <div class=" flex-grow mb-2">
+            <div class="font-bold text-lg mb-2">DevDiscuss</div>
+            <div class="text-gray-300 text-md mt-1">
+              A developer community platform where beginners can ask coding questions and experienced developers provide
+              solutions.
+              Features include error debugging assistance, voting system for best answers, and topic categorization.
+              Built to foster knowledge sharing and collaborative problem-solving in the developer community.
+            </div>
+
+          </div>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <!-- Inertia.js -->
+            <img src="https://inertiajs.com/favicon.ico" alt="Inertia.js"
+              class="w-8 h-8 p-1 object-contain bg-gray-700/40 rounded-lg border border-gray-600/40 hover:border-purple-500 transition-all duration-300" />
+            <!-- Vue -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" alt="Vue"
+              class="w-8 h-8 p-1 object-contain bg-gray-700/40 rounded-lg border border-gray-600/40 hover:border-green-500 transition-all duration-300" />
+
+            <!-- Laravel -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Laravel"
+              class="w-8 h-8 p-1 object-contain bg-gray-700/40 rounded-lg border border-gray-600/40 hover:border-red-500 transition-all duration-300" />
+          </div>
+          <!-- Bottom link -->
+          <div class="mt-auto  py-2 text-right">
+            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold"
+              target="_blank" rel="noopener noreferrer">
+              See More ....
+            </a>
+          </div>
+        </div>
+
+         <!-- Card 4 -->
+        <div
+          class="h-full flex flex-col px-4 py-2 rounded-xl overflow-hidden bg-gray-700/40 transform hover:scale-105 transition duration-300 motion-reduce:transform-none">
+
+          <!-- Top content -->
+          <div class=" flex-grow mb-2">
+            <div class="font-bold text-lg mb-2">Mandalar Second</div>
+            <div class="text-gray-300 text-md mt-1">
+              A peer-to-peer marketplace platform where users can seamlessly sell their pre-owned items and discover great deals from other sellers. Features include secure transactions, product categorization, bidding system, and real-time chat between buyers and sellers for a complete e-commerce experience.
+            </div>
+
+          </div>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <!-- Bootstrap -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" class="w-8 h-8 p-1 object-contain bg-gray-700/40 rounded-lg border border-gray-600/40
+      hover:border-[#7952b3] transition-all duration-300 hover:scale-110" alt="Bootstrap">
+
+            <!-- PHP -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" class="w-8 h-8 p-1 object-contain bg-gray-700/40 rounded-lg border border-gray-600/40
+      hover:border-[#8892be] transition-all duration-300 hover:scale-110" alt="PHP">
+
+
+          </div>
+          <!-- Bottom link -->
+          <div class="mt-auto  py-2 text-right">
+            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold"
+              target="_blank" rel="noopener noreferrer">
+              See More ....
+            </a>
+          </div>
+        </div>
+
       </div>
-    </div> -->
-  </div>
-  <div class="container mx-auto px-4 mt-4 text-white">
-    <p class=" font-bold text-3xl text-gray-500 hover:text-white duration-300 my-10">Projects</p>
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 sm:mx-auto md:gap-5">
-      <!-- Card 1 -->
-      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-600 transform hover:scale-105 transition duration-300 motion-reduce:transform-none">
-        <img
-          class="w-full"
-          src="../assets/hmitemp.png"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-2">
-          <div class="font-bold text-xl mb-2">Learning Management System </div>
-          <div class="flex flex-wrap gap-2 mt-2">
-          <!-- Example tech badges/icons, replace with actual tech stack -->
-          <span class="bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded">Vue.js</span>
-          <span class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">Laravel</span>
-          <span class="bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded">MySQL</span>
-          <span class="bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded">Bootstrap</span>
-        </div>
-        </div>
-        <div class="flex justify-end pt-2 pb-2">
-          <a
-            href="https://github.com/saihtoolwin/LMS"
-            class="inline-block px-3 py-1 text-sm font-semibold mr-2 mb-2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            See More ....
-          </a>
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-600 transform hover:scale-105 transition duration-300 motion-reduce:transform-none">
-        <img
-          class="w-full"
-          src="../assets/hmitemp.png"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-2">
-          <div class="font-bold text-xl mb-2">NEON Book Review System</div>
-          <div class="flex flex-wrap gap-2 mt-2">
-          <span class="bg-purple-600 text-white text-xs font-semibold px-2 py-1 rounded">PHP</span>
-          <span class="bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded">MySQL</span>
-          <span class="bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded">Bootstrap</span>
-        </div>
-        </div>
-        <div class="flex justify-end pt-2 pb-2">
-          <a
-            href="https://github.com/saihtoolwin/NEON-Book-Review-System"
-            class="inline-block px-3 py-1 text-sm font-semibold mr-2 mb-2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            See More ....
-          </a>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-600 transform hover:scale-105 transition duration-300 motion-reduce:transform-none">
-        <img
-          class="w-full"
-          src="../assets/hmitemp.png"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-2">
-          <div class="font-bold text-xl mb-2">Discussion</div>
-          <div class="flex flex-wrap gap-2 mt-2">
-          <!-- Example tech badges/icons, replace with actual tech stack -->
-          <span class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">Inertia.js</span>
-          <span class="bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded">MySQL</span>
-          <span class="bg-cyan-500 text-white text-xs font-semibold px-2 py-1 rounded">Tailwind CSS</span>
-        </div>
-        </div>
-        <div class="flex justify-end pt-2 pb-2">
-          <a
-            href="https://github.com/saihtoolwin/discussion"
-            class="inline-block px-3 py-1 text-sm font-semibold mr-2 mb-2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            See More ....
-          </a>
-        </div>
-      </div>
-      <!-- Card 4 -->
-      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-600 transform hover:scale-105 transition duration-300 motion-reduce:transform-none">
-        <img
-          class="w-full"
-          src="../assets/hmitemp.png"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-2">
-          <div class="font-bold text-xl mb-2">Learning Management System </div>
-          <div class="flex flex-wrap gap-2 mt-2">
-          <!-- Example tech badges/icons, replace with actual tech stack -->
-          <span class="bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded">Vue.js</span>
-          <span class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">Laravel</span>
-          <span class="bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded">MySQL</span>
-          <span class="bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded">Bootstrap</span>
-        </div>
-        </div>
-        <div class="flex justify-end pt-2 pb-2">
-          <a
-            href="https://github.com/saihtoolwin/LMS"
-            class="inline-block px-3 py-1 text-sm font-semibold mr-2 mb-2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            See More ....
-          </a>
-        </div>
-      </div>
-      </div>
-      <div class="flex justify-end mt-4 " >
+      <div class="flex justify-end mt-4 ">
         <a href="https://github.com/saihtoolwin?tab=repositories" target="_blank">
-        <p class="text-gray-400 hover:text-white mt-3">More Projects ></p>
-      </a>
+          <p class="text-gray-400 hover:text-white mt-3">More Projects ></p>
+        </a>
+      </div>
     </div>
-    
+
   </div>
 </template>
 
-<script setup>
-const techStack = [
-  { name: "HTML", icon: "fab fa-html5", color: "#e34c26" },
-  { name: "CSS", icon: "fab fa-css3-alt", color: "#264de4" },
-  { name: "Bootstrap", icon: "fab fa-bootstrap", color: "#563d7c" },
-  { name: "Tailwind", icon: "fas fa-wind", color: "#06b6d4" },
-  { name: "JavaScript", icon: "fab fa-js", color: "#f0db4f" },
-  { name: "Vue.js", icon: "fab fa-vuejs", color: "#42b883" },
-  { name: "Laravel", icon: "fab fa-laravel", color: "#ff2d20" },
-  { name: "GitHub", icon: "fab fa-github", color: "#ffffff" },
-  { name: "jQuery", icon: "fas fa-code", color: "#0769AD" }, // jQuery
-  { name: "MySQL", icon: "fas fa-database", color: "#4479A1" }, // MySQL
-  { name: "PHP", icon: "fab fa-php", color: "#4F5B93" } // PHP
-];
+<script>
+export default {
+  data() {
+    return {
+      tabs: ["Web", "Mobile"],
+      activeTab: "Web",
+    }
+  }
+}
 </script>
 
-<style scoped>
-@keyframes wave {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-wave {
-  animation: wave 1.5s ease-in-out infinite;
-}
-</style>
+<style scoped></style>

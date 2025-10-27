@@ -1,6 +1,6 @@
 <template>
     <div class="container mx-auto  bg-gradient-to-br from-slate-900 to-gray-900 pt-12 mb-4 px-4">
-        <div class="  grid grid-cols-1 lg:grid-cols-2 gap-12 ">
+        <div class="  grid grid-cols-1 lg:grid-cols-2 gap-3 ">
             <div class=" grid">
                 <!-- About Section -->
                 <div
@@ -9,7 +9,7 @@
                         <!-- <i class="fas fa-user mr-3 text-blue-400"></i> -->
                         About Me
                     </h2>
-                    <div class="bg-gray-700/30 rounded-xl p-6 border border-gray-600/30">
+                    <div class="bg-gray-700/30 rounded-xl p-3 border border-gray-600/30">
                         <p class="text-gray-300 text-lg leading-relaxed">
                             I'm a 3rd-year student at the University of Computer Studies, currently
                             focusing on web development. Although I've paused my formal education to
