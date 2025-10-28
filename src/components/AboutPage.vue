@@ -328,7 +328,7 @@
                                         July - 2024 Dec
                                     </p>
                                     <span
-                                        class="text-xs text-gray-400 bg-gray-700/50 px-2 py-1 rounded">Full-time-remote</span>
+                                        class="text-xs text-gray-400 bg-gray-700/50 px-2 py-1 rounded">Remote — Full-time</span>
                                 </div>
                                 <h3 class="font-bold text-white text-md md:text-xl mb-1">
                                     Intern Developer
