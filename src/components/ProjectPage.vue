@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto  mt-8 text-white px-3">
     <div class="p-3 md:p-6 bg-gray-700/40 px-5 rounded-2xl">
-      <p class=" font-bold text-3xl duration-300 ">Projects</p>
+      <p class=" font-bold text-2xl md:text-3xl duration-300 ">Projects</p>
       <div class="w-full flex justify-center mb-10">
         <ul class="flex   backdrop-blur-md bg-gray-700/40 rounded-3xl border border-gray-700/30 ">
           <li v-for="tab in tabs" :key="tab" @click="activeTab = tab"
@@ -18,15 +18,15 @@
         </ul>
       </div>
 
-      <div v-if="activeTab == 'Web'" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 sm:mx-auto md:gap-5   ">
+      <div v-if="activeTab == 'Web'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:mx-auto md:gap-5 gap-y-3  ">
         <!-- Card 1 -->
         <div
           class="h-full flex flex-col px-4 py-2 rounded-xl overflow-hidden bg-gray-700/40 transform hover:scale-105 transition duration-300 motion-reduce:transform-none">
 
           <!-- Top content -->
           <div class=" flex-grow mb-2">
-            <div class="font-bold text-lg mb-2">Learning Management System</div>
-            <div class="text-gray-300 text-md mt-1">
+            <div class="font-bold md:text-lg mb-2">Learning Management System</div>
+            <div class="text-gray-300 text-sm md:text-md mt-1">
               A modern web-based Learning Management System designed for educators and learners, focusing on course
               management, interactive learning, and scalable performance. Built for security, flexibility, and seamless
               user experience.
@@ -65,8 +65,8 @@
 
           <!-- Top content -->
           <div class=" flex-grow mb-2">
-            <div class="font-bold text-lg mb-2">BookReview System</div>
-            <div class="text-gray-300 text-md mt-1">
+            <div class="font-bold md:text-lg mb-2">BookReview System</div>
+            <div class="text-gray-300 text-sm md:text-md mt-1">
               BookReview System where users can browse, download, and review books. The platform
               focuses on user-friendly navigation, secure downloads, and interactive reviews, making it easy for readers
               to share and discover content. Built for scalability, flexibility, and seamless reading experience.
@@ -99,8 +99,8 @@
 
           <!-- Top content -->
           <div class=" flex-grow mb-2">
-            <div class="font-bold text-lg mb-2">DevDiscuss</div>
-            <div class="text-gray-300 text-md mt-1">
+            <div class="font-bold md:text-lg mb-2">DevDiscuss</div>
+            <div class="text-gray-300 text-sm md:text-md mt-1">
               A developer community platform where beginners can ask coding questions and experienced developers provide
               solutions.
               Features include error debugging assistance, voting system for best answers, and topic categorization.
@@ -135,8 +135,8 @@
 
           <!-- Top content -->
           <div class=" flex-grow mb-2">
-            <div class="font-bold text-lg mb-2">Mandalar Second</div>
-            <div class="text-gray-300 text-md mt-1">
+            <div class="font-bold md:text-lg mb-2">Mandalar Second</div>
+            <div class="text-gray-300 text-sm md:text-md mt-1">
               A peer-to-peer marketplace platform where users can seamlessly sell their pre-owned items and discover great deals from other sellers. Features include secure transactions, product categorization, bidding system, and real-time chat between buyers and sellers for a complete e-commerce experience.
             </div>
 

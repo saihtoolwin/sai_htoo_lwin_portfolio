@@ -5,12 +5,12 @@
                 <!-- About Section -->
                 <div
                     class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-3 md:p-6 shadow-2xl border border-gray-700/50">
-                    <h2 class="text-white font-bold text-3xl mb-8 flex items-center">
+                    <h2 class="text-white font-bold text-2xl  md:text-3xl mb-3 md:mb-8 flex items-center">
                         <!-- <i class="fas fa-user mr-3 text-blue-400"></i> -->
                         About Me
                     </h2>
                     <div class="bg-gray-700/30 rounded-xl p-3 border border-gray-600/30">
-                        <p class="text-gray-300 text-lg leading-relaxed">
+                        <p class="text-gray-300 text-base md:text-lg  leading-relaxed">
                             I'm a 3rd-year student at the University of Computer Studies, currently
                             focusing on web development. Although I've paused my formal education to
                             focus more on practical skills, I've been dedicating my time to learning
@@ -20,17 +20,16 @@
                             projects that make a real impact.
                         </p>
                     </div>
-
                 </div>
                 <div
                     class="bg-gray-800/50 backdrop-blur-sm rounded-2xl mt-3 p-3 md:p-6 shadow-2xl border border-gray-700/50">
-                    <h2 class="text-white font-bold text-3xl mb-6 flex items-center">
+                    <h2 class="text-white font-bold  text-2xl  md:text-3xl mb-2 md:mb-6 flex items-center">
                         Skills & Technologies
                     </h2>
                     <div class="mt-8 grid  gap-4">
                         <!-- Frontend Section -->
                         <div class="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20">
-                            <h3 class=" font-semibold mb-2">Frontend</h3>
+                            <h3 class=" font-semibold md:text-lg mb-2">Frontend</h3>
                             <div class="flex flex-wrap gap-3">
 
 
@@ -79,7 +78,7 @@
 
                         <!-- Backend Section -->
                         <div class="bg-green-500/10 rounded-lg p-4 border border-green-500/20">
-                            <h3 class="font-semibold mb-2">Backend</h3>
+                            <h3 class="font-semibold md:text-lg mb-2">Backend</h3>
                             <div class="flex flex-wrap gap-3">
 
 
@@ -127,7 +126,7 @@
                     <div class="mt-3 grid  gap-4">
                         <!-- DevOps & Tools -->
                         <div class="bg-purple-500/10 rounded-lg p-4 border border-purple-500/20">
-                            <h3 class=" font-semibold mb-2">DevOps & Tools</h3>
+                            <h3 class=" font-semibold md:text-lg mb-2">DevOps & Tools</h3>
                             <div class="flex flex-wrap gap-3">
                                 <!-- Ubuntu -->
                                 <div class="flex items-center gap-2 bg-orange-500/20 rounded-md px-3 py-1">
@@ -160,7 +159,7 @@
 
                         <!-- Mobile & Other -->
                         <div class="bg-cyan-500/10 rounded-lg p-4 border border-cyan-500/20">
-                            <h3 class=" font-semibold mb-2">Mobile & Other</h3>
+                            <h3 class=" font-semibold md:text-lg mb-2">Mobile & Other</h3>
                             <div class="flex flex-wrap gap-3">
                                 <!-- Flutter -->
                                 <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
@@ -184,11 +183,11 @@
 
             <!-- Experience Timeline -->
             <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-3 md:p-6 shadow-2xl border border-gray-700/50  ">
-                <h2 class="text-white font-bold text-3xl  flex items-center">
+                <h2 class="text-white font-bold text-2xl mb-2  md:text-3xl  flex items-center">
                     <!-- <i class="fas fa-briefcase mr-3 text-blue-400"></i> -->
                     Experience
                 </h2>
-                <div class="max-h-[880px] overflow-x-scroll">
+                <div class=" lg:max-h-[1000px] xl:max-h-[880px] overflow-x-scroll">
                     <ul class="relative  space-y-8 ">
                         <div class="absolute left-6 top-4 w-0.5 timeline-line" style="height: calc(100% - 80px)"></div>
                         <li class="relative pl-12">
@@ -208,13 +207,13 @@
                                     <span
                                         class="text-xs text-gray-400 bg-gray-700/50 px-2 py-1 rounded">Full-time</span>
                                 </div>
-                                <h3 class="font-bold text-white text-xl mb-1">
+                                <h3 class="font-bold text-white text-md md:text-xl mb-1">
                                     FullStack Developer
                                     <span class="text-gray-400 text-sm font-normal"> at Gfrog + Hinomaru Japanese
-                                        Education
+                                        education
                                         Center</span>
                                 </h3>
-                                <p class="mt-3 text-gray-300 leading-relaxed">
+                                <p class="mt-3 text-gray-300 leading-relaxed text-base md:text-md">
                                     As a Full Stack Developer, I am responsible for developing and maintaining dynamic
                                     web
                                     applications using
@@ -278,11 +277,11 @@
                                     <span
                                         class="text-xs text-gray-400 bg-gray-700/50 px-2 py-1 rounded">Full-time</span>
                                 </div>
-                                <h3 class="font-bold text-white text-xl mb-1">
+                                <h3 class="font-bold text-white text-md md:text-xl mb-1">
                                     Backend Developer
                                     <span class="text-gray-400 text-sm font-normal"> at Future Innovation IT</span>
                                 </h3>
-                                <p class="mt-3 text-gray-300 leading-relaxed">
+                                <p class="mt-3 text-gray-300 leading-relaxed text-base md:text-md">
                                     As a Backend Developer, I was responsible for designing and maintaining robust
                                     server-side systems using Laravel.
                                     My work involved developing RESTful APIs, managing relational databases, and
@@ -331,11 +330,11 @@
                                     <span
                                         class="text-xs text-gray-400 bg-gray-700/50 px-2 py-1 rounded">Full-time-remote</span>
                                 </div>
-                                <h3 class="font-bold text-white text-xl mb-1">
+                                <h3 class="font-bold text-white text-md md:text-xl mb-1">
                                     Intern Developer
                                     <span class="text-gray-400 text-sm font-normal"> at Creative Coder Myanmar</span>
                                 </h3>
-                                <p class="mt-3 text-gray-300 leading-relaxed">
+                                <p class="mt-3 text-gray-300 leading-relaxed text-base md:text-md">
                                     As an Intern Developer, I work as a full-stack developer using Vue.js and Laravel
                                     with
                                     Inertia.js to
@@ -383,12 +382,12 @@
                                     <span
                                         class="text-xs text-gray-400 bg-gray-700/50 px-2 py-1 rounded">Full-time</span>
                                 </div>
-                                <h3 class="font-bold text-white text-xl mb-1">
+                                <h3 class="font-bold text-white text-md md:text-xl mb-1">
                                     Junior Backend Developer
                                     <span class="text-gray-400 text-sm font-normal"> at Impact Tech Software
                                         Solutions</span>
                                 </h3>
-                                <p class="mt-3 text-gray-300 leading-relaxed">
+                                <p class="mt-3 text-gray-300 leading-relaxed text-base md:text-md">
                                     In this role, I worked primarily on the back-end, developing and maintaining
                                     databases
                                     and server-side
