@@ -2,30 +2,30 @@
   <div class="container mx-auto  flex flex-col items-center justify-center py-16 px-6">
     
     <!-- Header -->
-    <div class="text-center mb-12">
-      <h2 class="text-2xl md:text-4xl lg:text-5xl font-extrabold text-black dark:text-white mb-4">
+    <div class="text-center mb-6 md:mb-12">
+      <h2 class="text-xl md:text-3xl lg:text-4xl font-extrabold text-black dark:text-white mb-4">
         Let’s Build Something Together 🚀
       </h2>
-      <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+      <p class="text-gray-600 dark:text-gray-400 text-sm md:text-lg max-w-xl mx-auto">
         Have an idea, collaboration, or just want to say hi? Reach out — I’m always open to exciting opportunities!
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-10 max-w-5xl w-full border border-gray-300 dark:bg-gray-800/50 dark:border-gray-700/50 backdrop-blur-sm rounded-2xl p-10 shadow-xl">
+    <div class="grid md:grid-cols-2 gap-10 max-w-5xl w-full border border-gray-300 dark:bg-gray-800/50 dark:border-gray-700/50 backdrop-blur-sm rounded-2xl p-6 md:p-10 shadow-xl">
       
       <!-- Left: Contact Info + Socials -->
       <div class="flex flex-col justify-between space-y-10">
         <div class="space-y-5">
           <div class="flex items-center space-x-4">
-            <i class="fa-solid fa-envelope dark:text-white text-2xl"></i>
+            <i class="fa-solid fa-envelope dark:text-white text-md md:text-2xl"></i>
             <span class="dark:text-gray-200 text-lg">saihtoolwin66@gmail.com</span>
           </div>
           <div class="flex items-center space-x-4">
-            <i class="fa-solid fa-phone dark:text-white text-2xl"></i>
+            <i class="fa-solid fa-phone dark:text-white text-md md:text-2xl"></i>
             <span class="dark:text-gray-200 text-lg">+95 9 123 456 789</span>
           </div>
           <div class="flex items-center space-x-4">
-            <i class="fa-solid fa-location-dot dark:text-white text-2xl"></i>
+            <i class="fa-solid fa-location-dot dark:text-white text-md md:text-2xl"></i>
             <span class="dark:text-gray-200 text-lg">Yangon, Myanmar</span>
           </div>
         </div>
@@ -77,7 +77,7 @@
 
     <!-- Footer -->
     <div class="mt-10 text-gray-600 dark:text-gray-400 text-sm">
-      Made with ❤️ by <span class="text-sky-400 font-semibold">Sai Htoo Lwin</span>
+      Made with ❤️ by <span class="text-black dark:text-white font-semibold">Sai Htoo Lwin</span>
     </div>
   </div>
 </template>

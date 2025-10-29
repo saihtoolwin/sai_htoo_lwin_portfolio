@@ -29,7 +29,7 @@
                     <div class="mt-8 grid  gap-4">
                         <!-- Frontend Section -->
                         <div class="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20">
-                            <h3 class=" font-semibold md:text-lg mb-2">Frontend</h3>
+                            <h3 class=" text-black dark:text-white font-semibold md:text-lg mb-2">Frontend</h3>
                             <div class="flex flex-wrap gap-3">
 
 
@@ -78,7 +78,7 @@
 
                         <!-- Backend Section -->
                         <div class="bg-green-500/10 rounded-lg p-4 border border-green-500/20">
-                            <h3 class="font-semibold md:text-lg mb-2">Backend</h3>
+                            <h3 class="text-black dark:text-white font-semibold md:text-lg mb-2">Backend</h3>
                             <div class="flex flex-wrap gap-3">
 
 
@@ -126,7 +126,7 @@
                     <div class="mt-3 grid  gap-4">
                         <!-- DevOps & Tools -->
                         <div class="bg-purple-500/10 rounded-lg p-4 border border-purple-500/20">
-                            <h3 class=" font-semibold md:text-lg mb-2">DevOps & Tools</h3>
+                            <h3 class=" text-black dark:text-white font-semibold md:text-lg mb-2">DevOps & Tools</h3>
                             <div class="flex flex-wrap gap-3">
                                 <!-- Ubuntu -->
                                 <div class="flex items-center gap-2 bg-orange-500/20 rounded-md px-3 py-1">
@@ -159,7 +159,7 @@
 
                         <!-- Mobile & Other -->
                         <div class="bg-cyan-500/10 rounded-lg p-4 border border-cyan-500/20">
-                            <h3 class=" font-semibold md:text-lg mb-2">Mobile & Other</h3>
+                            <h3 class=" text-black dark:text-white font-semibold md:text-lg mb-2">Mobile & Other</h3>
                             <div class="flex flex-wrap gap-3">
                                 <!-- Flutter -->
                                 <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
@@ -206,7 +206,7 @@
                                         April - Current
                                     </p>
                                     <span
-                                        class="text-xs text-gray-700 border border-gray-200 bg-white dark:text-gray-400 drak:bg-gray-700/50 px-2 py-1 rounded">Full-time</span>
+                                        class="text-xs text-gray-700 border border-gray-400  dark:bg-gray-800/50 bg-white dark:text-gray-300  px-2 py-1 rounded">Full-time</span>
                                 </div>
                                 <h3 class="font-bold  text-md md:text-xl mb-1 dark:text-white">
                                     FullStack Developer
@@ -279,7 +279,7 @@
                                         Jan - 2025 Apr
                                     </p>
                                     <span
-                                        class="text-xs text-gray-700 border border-gray-200 bg-white dark:text-gray-400 drak:bg-gray-700/50 px-2 py-1 rounded">Full-time</span>
+                                        class="text-xs text-gray-700 border border-gray-400  dark:bg-gray-800/50 bg-white dark:text-gray-300  px-2 py-1 rounded">Full-time</span>
                                 </div>
                                 <h3 class="font-bold  text-md md:text-xl mb-1 dark:text-white">
                                     Backend Developer
@@ -333,7 +333,7 @@
                                         July - 2024 Dec
                                     </p>
                                     <span
-                                        class="text-xs text-gray-700 border border-gray-200 bg-white dark:text-gray-400 drak:bg-gray-700/50 px-2 py-1 rounded">Remote
+                                        class="text-xs text-gray-700 border border-gray-400  dark:bg-gray-800/50 bg-white dark:text-gray-300  px-2 py-1 rounded">Remote
                                         — Full-time</span>
                                 </div>
                                 <h3 class="font-bold  text-md md:text-xl mb-1 dark:text-white">
@@ -387,7 +387,7 @@
                                         2024 Jan - 2024 July
                                     </p>
                                     <span
-                                        class="text-xs text-gray-700 border border-gray-200 bg-white dark:text-gray-400 drak:bg-gray-700/50 px-2 py-1 rounded">Full-time</span>
+                                        class="text-xs text-gray-700 border border-gray-400  dark:bg-gray-800/50 bg-white dark:text-gray-300  px-2 py-1 rounded">Full-time</span>
                                 </div>
                                 <h3 class="font-bold  text-md md:text-xl mb-1 dark:text-white">
                                     Junior Backend Developer
