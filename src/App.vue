@@ -1,5 +1,5 @@
 <template>
-  <div class=" bg-gradient-to-br from-slate-900 to-gray-900 dark:bg-white text-white dark:text-black">
+  <div class=" dark:bg-gradient-to-br dark:from-slate-900 dark:to-gray-900 bg-none to-gray-100 ">
     <NavbarPage></NavbarPage>
     <HomePage class="mb-16"></HomePage>
     <AboutPage class="relative "></AboutPage>
