@@ -18,15 +18,15 @@
         <div class="space-y-5">
           <div class="flex items-center space-x-4">
             <i class="fa-solid fa-envelope dark:text-white text-md md:text-2xl"></i>
-            <span class="dark:text-gray-200 text-lg">saihtoolwin66@gmail.com</span>
+            <span class="dark:text-gray-200 text-sm md:text-lg">saihtoolwin66@gmail.com</span>
           </div>
           <div class="flex items-center space-x-4">
             <i class="fa-solid fa-phone dark:text-white text-md md:text-2xl"></i>
-            <span class="dark:text-gray-200 text-lg">+95 9 123 456 789</span>
+            <span class="dark:text-gray-200 text-sm md:text-lg">+95 9 123 456 789</span>
           </div>
           <div class="flex items-center space-x-4">
             <i class="fa-solid fa-location-dot dark:text-white text-md md:text-2xl"></i>
-            <span class="dark:text-gray-200 text-lg">Yangon, Myanmar</span>
+            <span class="dark:text-gray-200 text-sm md:text-lg">Yangon, Myanmar</span>
           </div>
         </div>
 
@@ -68,7 +68,7 @@
 
         <button
           type="submit"
-          class="w-full py-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-semibold text-lg transition shadow-lg hover:shadow-sky-400/40"
+          class="w-full py-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm md:text-lg transition shadow-lg hover:shadow-sky-400/40"
         >
           Send Message 
         </button>
