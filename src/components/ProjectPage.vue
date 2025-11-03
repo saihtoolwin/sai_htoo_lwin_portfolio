@@ -52,7 +52,7 @@
           </div>
           <!-- Bottom link -->
           <div class="mt-auto  py-2 text-right">
-            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold"
+            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black"
               target="_blank" rel="noopener noreferrer">
               See More ....
             </a>
@@ -86,7 +86,7 @@
           </div>
           <!-- Bottom link -->
           <div class="mt-auto  py-2 text-right">
-            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold"
+            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black"
               target="_blank" rel="noopener noreferrer">
               See More ....
             </a>
@@ -122,7 +122,7 @@
           </div>
           <!-- Bottom link -->
           <div class="mt-auto  py-2 text-right">
-            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold"
+            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black"
               target="_blank" rel="noopener noreferrer">
               See More ....
             </a>
@@ -154,7 +154,7 @@
           </div>
           <!-- Bottom link -->
           <div class="mt-auto  py-2 text-right">
-            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold"
+            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black"
               target="_blank" rel="noopener noreferrer">
               See More ....
             </a>
@@ -164,7 +164,9 @@
       </div>
       <div class="flex justify-end mt-4 ">
         <a href="https://github.com/saihtoolwin?tab=repositories" target="_blank">
-          <p class="text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white mt-3">More Projects ></p>
+          <p class="text-gray-600 text-sm md:text-md dark:text-gray-400 hover:text-gray-800 dark:hover:text-white mt-3 hover:scale-110 transition-transform duration-300 ">More Projects 
+            <i class="fa-solid fa-arrow-right"></i>
+          </p>
         </a>
       </div>
     </div>
