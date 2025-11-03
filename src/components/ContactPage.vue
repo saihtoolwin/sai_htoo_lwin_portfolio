@@ -1,13 +1,13 @@
 <template>
-  <div class="container mx-auto  flex flex-col items-center justify-center py-16 px-6">
+  <div class="container mx-auto flex flex-col items-center justify-center py-16 px-6">
     
     <!-- Header -->
     <div class="text-center mb-6 md:mb-12">
       <h2 class="text-xl md:text-3xl lg:text-4xl font-extrabold text-black dark:text-white mb-4">
-        Let’s Build Something Together 🚀
+        Let's Build Something Together 🚀
       </h2>
       <p class="text-gray-600 dark:text-gray-400 text-sm md:text-lg max-w-xl mx-auto">
-        Have an idea, collaboration, or just want to say hi? Reach out — I’m always open to exciting opportunities!
+        Have an idea, collaboration, or just want to say hi? Reach out — I'm always open to exciting opportunities!
       </p>
     </div>
 
@@ -68,10 +68,19 @@
 
         <button
           type="submit"
-          class="w-full py-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm md:text-lg transition shadow-lg hover:shadow-sky-400/40"
+          :disabled="loading"
+          class="w-full py-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm md:text-lg transition shadow-lg hover:shadow-sky-400/40 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Send Message 
+          {{ loading ? 'Sending...' : 'Send Message' }}
         </button>
+
+        <!-- Success/Error Messages -->
+        <div v-if="success" class="p-3 rounded-lg bg-green-500/20 text-green-400 text-center">
+          {{ success }}
+        </div>
+        <div v-if="error" class="p-3 rounded-lg bg-red-500/20 text-red-400 text-center">
+          {{ error }}
+        </div>
       </form>
     </div>
 
@@ -88,12 +97,46 @@ export default {
   data() {
     return {
       form: { name: "", email: "", message: "" },
+      loading: false,
+      success: "",
+      error: "",
     };
   },
   methods: {
-    submitForm() {
-      alert(`Thanks, ${this.form.name}! Your message has been sent.`);
-      this.form = { name: "", email: "", message: "" };
+    async submitForm() {
+      this.loading = true;
+      this.success = "";
+      this.error = "";
+
+      try {
+        const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            service_id: process.env.VUE_APP_EMAILJS_SERVICE_ID,
+            template_id: process.env.VUE_APP_EMAILJS_TEMPLATE_ID,
+            user_id: process.env.VUE_APP_EMAILJS_PUBLIC_KEY,
+            template_params: {
+              from_name: this.form.name,
+              from_email: this.form.email,
+              message: this.form.message,
+              to_email: "saihtoolwin66@gmail.com"
+            },
+          }),
+        });
+
+        if (response.ok) {
+          this.success = "✅ Message sent successfully!";
+          this.form = { name: "", email: "", message: "" };
+        } else {
+          this.error = "❌ Failed to send message. Please try again.";
+        }
+      } catch (err) {
+        console.error("EmailJS Error:", err);
+        this.error = "⚠️ Something went wrong. Please try again later.";
+      } finally {
+        this.loading = false;
+      }
     },
   },
 };
