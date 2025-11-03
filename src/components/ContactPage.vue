@@ -47,14 +47,14 @@
             type="text"
             placeholder="Your Name"
             required
-            class="w-full p-3 rounded-lg dark:bg-gray-900/60 border border-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500 focus:outline-none"
+            class="w-full p-3 rounded-lg dark:bg-gray-900/60 border border-gray-700 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500 focus:outline-none"
           />
           <input
             v-model="form.email"
             type="email"
             placeholder="Email Address"
             required
-            class="w-full p-3 rounded-lg dark:bg-gray-900/60 border border-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500 focus:outline-none"
+            class="w-full p-3 rounded-lg dark:bg-gray-900/60 border border-gray-700 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500 focus:outline-none"
           />
         </div>
 
@@ -63,13 +63,13 @@
           rows="5"
           placeholder="Tell me about your project..."
           required
-          class="w-full p-3 rounded-lg dark:bg-gray-900/60 border border-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500 focus:outline-none"
+          class="w-full p-3 rounded-lg dark:bg-gray-900/60 border border-gray-700 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500 focus:outline-none"
         ></textarea>
 
         <button
           type="submit"
           :disabled="loading"
-          class="w-full py-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm md:text-lg transition shadow-lg hover:shadow-sky-400/40 disabled:opacity-50 disabled:cursor-not-allowed"
+          class="w-full py-3 rounded-lg bg-sky-600 hover:bg-sky-500 dark:text-white font-semibold text-sm md:text-lg transition shadow-lg hover:shadow-sky-400/40 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {{ loading ? 'Sending...' : 'Send Message' }}
         </button>
