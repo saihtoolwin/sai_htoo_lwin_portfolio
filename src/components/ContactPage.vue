@@ -69,7 +69,7 @@
         <button
           type="submit"
           :disabled="loading"
-          class="w-full py-3 rounded-lg bg-sky-600 hover:bg-sky-500 dark:text-white font-semibold text-sm md:text-lg transition shadow-lg hover:shadow-sky-400/40 disabled:opacity-50 disabled:cursor-not-allowed"
+          class="w-full py-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm md:text-lg transition shadow-lg hover:shadow-sky-400/40 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {{ loading ? 'Sending...' : 'Send Message' }}
         </button>

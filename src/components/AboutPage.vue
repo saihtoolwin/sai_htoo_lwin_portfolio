@@ -199,7 +199,7 @@
                             </div>
                             <!-- Content Card -->
                             <div
-                                class="dark:bg-gray-700/40 rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-blue-500/30 transition-all duration-300">
+                                class="dark:bg-gray-700/40 rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-red-500 transition-all duration-300">
                                 <div class="flex justify-between items-start mb-2">
                                     <p class="text-red-500 dark:text-red-300 font-medium bg-red-500/10 px-3 py-1 rounded-full text-sm">
                                         2025
@@ -237,7 +237,7 @@
                                     <!-- React -->
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
                                         alt="React"
-                                        class="w-8 h-8 p-1 object-contain dark:bg-gray-700/40 rounded-lg border border-gray-300 dark:border-gray-600/40 hover:border-cyan-400 transition-all duration-300" />
+                                        class="w-8 h-8 p-1 object-contain dark:bg-gray-700/40 rounded-lg border border-gray-300 dark:border-gray-600/40 hover:border-cyan-500 transition-all duration-300" />
 
                                     <!-- Laravel -->
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg"
@@ -272,7 +272,7 @@
                             </div>
                             <!-- Content Card -->
                             <div
-                                class="dark:bg-gray-700/40 rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-blue-500/30 transition-all duration-300">
+                                class="dark:bg-gray-700/40 rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-cyan-500 transition-all duration-300">
                                 <div class="flex justify-between items-start mb-2">
                                     <p class="text-cyan-500 dark:text-cyan-300 font-medium bg-cyan-500/10 px-3 py-1 rounded-full text-sm">
                                         2025
@@ -326,7 +326,7 @@
                             </div>
                             <!-- Content Card -->
                             <div
-                                class="dark:bg-gray-700/40 rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-blue-500/30 transition-all duration-300">
+                                class="dark:bg-gray-700/40 rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-blue-500 transition-all duration-300">
                                 <div class="flex justify-between items-start mb-2">
                                     <p class="text-blue-500 dark:text-blue-300 font-medium bg-blue-500/10 px-3 py-1 rounded-full text-sm">
                                         2024
@@ -380,7 +380,7 @@
                             </div>
                             <!-- Content Card -->
                             <div
-                                class="dark:bg-gray-700/40 rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-green-500/30 transition-all duration-300">
+                                class="dark:bg-gray-700/40 rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-green-500 transition-all duration-300">
                                 <div class="flex justify-between items-start mb-2">
                                     <p
                                         class="text-green-500 dark:text-green-300 font-medium bg-green-500/10 px-3 py-1 rounded-full text-sm">
