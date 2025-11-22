@@ -1,15 +1,15 @@
 <template>
     <div class="container mx-auto  pt-12 mb-4 px-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 ">
-            <div class=" grid">
+            <div ref="aboutSection" class=" grid">
                 <!-- About Section -->
-                <div
-                    class="dark:bg-gray-800/50 backdrop-blur-sm border-gray-300 dark:border-gray-700/50  rounded-2xl p-3 md:p-6 shadow-lg border ">
+                <div 
+                    class="dark:bg-gray-800/50 backdrop-blur-sm border-gray-300 dark:border-gray-700/50  rounded-2xl p-3 md:p-6 shadow-md border ">
                     <h2 class=" font-bold text-2xl dark:text-white   md:text-3xl mb-3 md:mb-8 flex items-center">
                         <!-- <i class="fas fa-user mr-3 text-blue-400"></i> -->
                         About Me
                     </h2>
-                    <div class="dark:bg-gray-700/30 rounded-xl p-3 border dark:b border-gray-600/30">
+                    <div class="dark:bg-gray-700/30 rounded-xl p-3 border  border-gray-600/30">
                         <p class="text-black dark:text-gray-300 text-base md:text-md  leading-relaxed">
                             I'm a 3rd-year student at the University of Computer Studies, currently
                             focusing on web development. Although I've paused my formal education to
@@ -22,168 +22,144 @@
                     </div>
                 </div>
                 <div
-                    class="dark:bg-gray-800/50 backdrop-blur-sm border-gray-300 dark:border-gray-700/50  rounded-2xl mt-3 p-3 md:p-6 shadow-2xl border ">
-                    <h2 class=" font-bold text-2xl dark:text-white   md:text-3xl mb-2 md:mb-6 flex items-center">
+                    class="dark:bg-gray-800/50 backdrop-blur-sm border-gray-300 dark:border-gray-700/50 rounded-2xl mt-3 p-3 md:p-6 shadow-md border">
+
+                    <h2 class="font-bold text-2xl dark:text-white md:text-3xl mb-2 md:mb-6 flex items-center">
                         Skills & Technologies
                     </h2>
-                    <div class="mt-8 grid  gap-4">
-                        <!-- Frontend Section -->
+
+                    <div class="space-y-6">
+
+                        <!-- Row 1: Languages -->
                         <div class="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20">
-                            <h3 class=" text-black dark:text-white font-semibold md:text-lg mb-2">Frontend</h3>
+                            <h3 class="text-black dark:text-white font-semibold md:text-lg mb-3">Programming Languages
+                            </h3>
                             <div class="flex flex-wrap gap-3">
-
-
-                                <!-- Bootstrap -->
-                                <div class="flex items-center gap-2 bg-purple-500/20 rounded-md px-3 py-1">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg"
-                                        class="w-5 h-5" alt="Bootstrap">
-                                    <span class="text-black dark:text-gray-300 text-sm">Bootstrap</span>
-                                </div>
-
-                                <!-- Tailwind CSS -->
-                                <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
-                                    <svg class="w-5 h-5" viewBox="0 0 54 33" fill="currentColor">
-                                        <path
-                                            d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z" />
-                                    </svg>
-                                    <span class="text-black dark:text-gray-300 text-sm">Tailwind CSS</span>
-                                </div>
-                                <!-- JavaScript -->
                                 <div class="flex items-center gap-2 bg-yellow-500/20 rounded-md px-3 py-1">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                                        class="w-5 h-5" alt="JavaScript">
+                                        class="w-5 h-5">
                                     <span class="text-black dark:text-gray-300 text-sm">JavaScript</span>
                                 </div>
-                                <!-- Vue.js -->
-                                <div class="flex items-center gap-2 bg-green-500/20 rounded-md px-3 py-1">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
-                                        class="w-5 h-5" alt="Vue.js">
-                                    <span class="text-black dark:text-gray-300 text-sm">Vue.js</span>
-                                </div>
-
-                                <!-- React -->
-                                <div class="flex items-center gap-2 bg-cyan-500/20 rounded-md px-3 py-1">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                                        class="w-5 h-5" alt="React">
-                                    <span class="text-black dark:text-gray-300 text-sm">React</span>
-                                </div>
-                                <!-- Inertia.js -->
-                                <div class="flex items-center gap-2 bg-sky-500/20 rounded-md px-3 py-1">
-                                    <img src="https://inertiajs.com/favicon.ico" alt="Inertia.js" class="w-5 h-5" />
-
-                                    <span class="text-black dark:text-gray-300 text-sm">Inertia.js</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Backend Section -->
-                        <div class="bg-green-500/10 rounded-lg p-4 border border-green-500/20">
-                            <h3 class="text-black dark:text-white font-semibold md:text-lg mb-2">Backend</h3>
-                            <div class="flex flex-wrap gap-3">
-
-
-                                <!-- PHP -->
                                 <div class="flex items-center gap-2 bg-indigo-500/20 rounded-md px-3 py-1">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg"
-                                        class="w-5 h-5" alt="PHP">
+                                        class="w-5 h-5">
                                     <span class="text-black dark:text-gray-300 text-sm">PHP</span>
                                 </div>
-                                <!-- Laravel -->
-                                <div class="flex items-center gap-2 bg-red-500/20 rounded-md px-3 py-1">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg"
-                                        alt="Laravel" class="w-5 h-5" />
-
-                                    <span class="text-black dark:text-gray-300 text-sm">Laravel</span>
-                                </div>
-
-                                <!-- WordPress -->
-                                <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
-                                    <i
-                                        class="fa-brands fa-wordpress text-lg  flex items-center justify-center w-5 h-5"></i>
-                                    <span class="text-black dark:text-gray-300 text-sm">WordPress</span>
-                                </div>
-                                <!-- Filament -->
-                                <div class="flex items-center gap-2 bg-orange-500/20 rounded-md px-3 py-1">
-                                    <img src="https://filamentphp.com/images/icon.png" class="w-5 h-5" alt="Filament">
-                                    <span class="text-black dark:text-gray-300 text-sm">Filament</span>
-                                </div>
-                                <!-- MySQL -->
-                                <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                                        class="w-5 h-5" alt="MySQL">
-                                    <span class="text-black dark:text-gray-300 text-sm">MySQL</span>
-                                </div>
-
-                                <!-- PostgreSQL -->
-                                <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                                        class="w-5 h-5" alt="PostgreSQL">
-                                    <span class="text-black dark:text-gray-300 text-sm">PostgreSQL</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-3 grid  gap-4">
-                        <!-- DevOps & Tools -->
-                        <div class="bg-purple-500/10 rounded-lg p-4 border border-purple-500/20">
-                            <h3 class=" text-black dark:text-white font-semibold md:text-lg mb-2">DevOps & Tools</h3>
-                            <div class="flex flex-wrap gap-3">
-                                <!-- Ubuntu -->
-                                <div class="flex items-center gap-2 bg-orange-500/20 rounded-md px-3 py-1">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"
-                                        class="w-5 h-5" alt="Ubuntu">
-                                    <span class="text-black dark:text-gray-300 text-sm">Ubuntu</span>
-                                </div>
-
-                                <!-- Digital Ocean -->
-                                <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg"
-                                        class="w-5 h-5" alt="Digital Ocean">
-                                    <span class="text-black dark:text-gray-300 text-sm">Digital Ocean</span>
-                                </div>
-
-                                <!-- Postman -->
-                                <div class="flex items-center gap-2 bg-orange-500/20 rounded-md px-3 py-1">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
-                                        class="w-5 h-5" alt="Postman">
-                                    <span class="text-black dark:text-gray-300 text-sm">Postman</span>
-                                </div>
-                                <!-- Docker -->
-                                <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg"
-                                        class="w-5 h-5" alt="Docker">
-                                    <span class="text-black dark:text-gray-300 text-sm">Docker</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Mobile & Other -->
-                        <div class="bg-cyan-500/10 rounded-lg p-4 border border-cyan-500/20">
-                            <h3 class=" text-black dark:text-white font-semibold md:text-lg mb-2">Mobile & Other</h3>
-                            <div class="flex flex-wrap gap-3">
-                                <!-- Flutter -->
-                                <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-                                        class="w-5 h-5" alt="Flutter">
-                                    <span class="text-black dark:text-gray-300 text-sm">Flutter</span>
-                                </div>
-
-                                <!-- Dart -->
                                 <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
-                                        class="w-5 h-5" alt="Dart">
+                                        class="w-5 h-5">
                                     <span class="text-black dark:text-gray-300 text-sm">Dart</span>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Row 2: Frameworks -->
+                        <div class="bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                            <h3 class="text-black dark:text-white font-semibold md:text-lg mb-3">Frameworks & Libraries
+                            </h3>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="flex items-center gap-2 bg-cyan-500/20 rounded-md px-3 py-1">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                        class="w-5 h-5">
+                                    <span class="text-black dark:text-gray-300 text-sm">React</span>
+                                </div>
+                                <div class="flex items-center gap-2 bg-green-500/20 rounded-md px-3 py-1">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                                        class="w-5 h-5">
+                                    <span class="text-black dark:text-gray-300 text-sm">Vue.js</span>
+                                </div>
+                                <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-5 h-5">
+                                        <path fill="#38bdf8"
+                                            d="M24 14c-5.333 0-8.667 2.667-10 8 2-2.667 4.333-3.667 7-3 1.522.38 2.618 1.49 3.805 2.713C26.987 23.104 29.26 25.5 34 25.5c5.333 0 8.667-2.667 10-8-2 2.667-4.333 3.667-7 3-1.522-.38-2.618-1.49-3.805-2.713C30.013 16.396 27.74 14 24 14zm-14 11c-5.333 0-8.667 2.667-10 8 2-2.667 4.333-3.667 7-3 1.522.38 2.618 1.49 3.805 2.713C12.987 34.604 15.26 37 20 37c5.333 0 8.667-2.667 10-8-2 2.667-4.333 3.667-7 3-1.522-.38-2.618-1.49-3.805-2.713C16.013 27.896 13.74 25.5 10 25.5z" />
+                                    </svg>
+
+                                    <span class="text-black dark:text-gray-300 text-sm">Tailwind CSS</span>
+                                </div>
+
+                                <div class="flex items-center gap-2 bg-red-500/20 rounded-md px-3 py-1">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg"
+                                        class="w-5 h-5">
+                                    <span class="text-black dark:text-gray-300 text-sm">Laravel</span>
+                                </div>
+                                <div class="flex items-center gap-2 bg-orange-500/20 rounded-md px-3 py-1">
+                                    <img src="https://filamentphp.com/images/icon.png" class="w-5 h-5">
+                                    <span class="text-black dark:text-gray-300 text-sm">Filament</span>
+                                </div>
+                                <!-- Mobile -->
+                                <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                                        class="w-5 h-5">
+                                    <span class="text-black dark:text-gray-300 text-sm">Flutter</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Databases -->
+                        <div class="bg-yellow-500/10 rounded-lg p-4 border border-yellow-500/20">
+                            <h3 class="text-black dark:text-white font-semibold md:text-lg mb-3">Databases</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                        class="w-5 h-5">
+                                    <span class="text-black dark:text-gray-300 text-sm">MySQL</span>
+                                </div>
+                                <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                                        class="w-5 h-5">
+                                    <span class="text-black dark:text-gray-300 text-sm">PostgreSQL</span>
+                                </div>
+                                <div class="flex items-center gap-2 bg-yellow-500/20 rounded-md px-3 py-1">
+                                    <img src="https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png"
+                                        class="w-5 h-5">
+                                    <span class="text-black dark:text-gray-300 text-sm">Firebase</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Row 4: Tools + Mobile (combined) -->
+                        <div class="bg-purple-500/10 rounded-lg p-4 border border-purple-500/20">
+                            <h3 class="text-black dark:text-white font-semibold md:text-lg mb-3">Tools & 
+                                Development</h3>
+                            <div class="flex flex-wrap gap-3">
+
+                                <!-- Tools -->
+                                <div class="flex items-center gap-2 bg-orange-500/20 rounded-md px-3 py-1">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"
+                                        class="w-5 h-5">
+                                    <span class="text-black dark:text-gray-300 text-sm">Ubuntu</span>
+                                </div>
+                                <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg"
+                                        class="w-5 h-5">
+                                    <span class="text-black dark:text-gray-300 text-sm">DigitalOcean</span>
+                                </div>
+                                <div class="flex items-center gap-2 bg-orange-500/20 rounded-md px-3 py-1">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                                        class="w-5 h-5">
+                                    <span class="text-black dark:text-gray-300 text-sm">Postman</span>
+                                </div>
+                                <div class="flex items-center gap-2 bg-blue-500/20 rounded-md px-3 py-1">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg"
+                                        class="w-5 h-5">
+                                    <span class="text-black dark:text-gray-300 text-sm">Docker</span>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
             </div>
 
 
             <!-- Experience Timeline -->
-            <div
-                class="dark:bg-gray-800/50 backdrop-blur-sm border-gray-300 dark:border-gray-700/50  rounded-2xl p-3 md:p-6 shadow-2xl border   ">
+            <div ref="experienceItems"
+                class="dark:bg-gray-800/50 backdrop-blur-sm border-gray-300 dark:border-gray-700/50  rounded-2xl p-3 md:p-6 shadow-md border   ">
                 <h2 class=" font-bold text-2xl dark:text-white  mb-2  md:text-3xl  flex items-center">
                     <!-- <i class="fas fa-briefcase mr-3 text-blue-400"></i> -->
                     Experience
@@ -194,14 +170,15 @@
                         <li class="relative pl-12">
                             <!-- Dot with icon -->
                             <div
-                                class="absolute left-4 top-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center shadow-lg shadow-blue-500/30">
+                                class="absolute left-4 top-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center shadow-md shadow-blue-500/30">
                                 <i class="fa-solid fa-code-compare  text-xs"></i>
                             </div>
                             <!-- Content Card -->
                             <div
-                                class="dark:bg-gray-700/40 rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-red-500 transition-all duration-300">
+                                class="dark:bg-gray-700/40 cursor-pointer rounded-xl p-3 border cursor-p border-gray-200 dark:border-gray-600/40 hover:border-red-500 transition-all duration-300">
                                 <div class="flex justify-between items-start mb-2">
-                                    <p class="text-red-500 dark:text-red-300 font-medium bg-red-500/10 px-3 py-1 rounded-full text-sm">
+                                    <p
+                                        class="text-red-500 dark:text-red-300 font-medium bg-red-500/10 px-3 py-1 rounded-full text-sm">
                                         2025
                                         April - Current
                                     </p>
@@ -267,14 +244,15 @@
                         <li class="relative pl-12">
                             <!-- Dot with icon -->
                             <div
-                                class="absolute left-4 top-1 w-5 h-5 bg-cyan-500 rounded-full flex items-center justify-center shadow-lg shadow-blue-500/30">
+                                class="absolute left-4 top-1 w-5 h-5 bg-cyan-500 rounded-full flex items-center justify-center shadow-md shadow-blue-500/30">
                                 <i class="fa-solid fa-laptop-code  text-xs"></i>
                             </div>
                             <!-- Content Card -->
                             <div
-                                class="dark:bg-gray-700/40 rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-cyan-500 transition-all duration-300">
+                                class="dark:bg-gray-700/40 cursor-pointer rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-cyan-500 transition-all duration-300">
                                 <div class="flex justify-between items-start mb-2">
-                                    <p class="text-cyan-500 dark:text-cyan-300 font-medium bg-cyan-500/10 px-3 py-1 rounded-full text-sm">
+                                    <p
+                                        class="text-cyan-500 dark:text-cyan-300 font-medium bg-cyan-500/10 px-3 py-1 rounded-full text-sm">
                                         2025
                                         Jan - 2025 Apr
                                     </p>
@@ -321,14 +299,15 @@
                         <li class="relative pl-12">
                             <!-- Dot with icon -->
                             <div
-                                class="absolute left-4 top-1 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center shadow-lg shadow-blue-500/30">
+                                class="absolute left-4 top-1 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center shadow-md shadow-blue-500/30">
                                 <i class="fas fa-code  text-xs"></i>
                             </div>
                             <!-- Content Card -->
                             <div
-                                class="dark:bg-gray-700/40 rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-blue-500 transition-all duration-300">
+                                class="dark:bg-gray-700/40 cursor-pointer rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-blue-500 transition-all duration-300">
                                 <div class="flex justify-between items-start mb-2">
-                                    <p class="text-blue-500 dark:text-blue-300 font-medium bg-blue-500/10 px-3 py-1 rounded-full text-sm">
+                                    <p
+                                        class="text-blue-500 dark:text-blue-300 font-medium bg-blue-500/10 px-3 py-1 rounded-full text-sm">
                                         2024
                                         July - 2024 Dec
                                     </p>
@@ -375,12 +354,12 @@
                         <li class="relative pl-12">
                             <!-- Dot with icon -->
                             <div
-                                class="absolute left-4 top-1 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30">
+                                class="absolute left-4 top-1 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center shadow-md shadow-green-500/30">
                                 <i class="fas fa-server  text-xs"></i>
                             </div>
                             <!-- Content Card -->
                             <div
-                                class="dark:bg-gray-700/40 rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-green-500 transition-all duration-300">
+                                class="dark:bg-gray-700/40 cursor-pointer rounded-xl p-3 border border-gray-200 dark:border-gray-600/40 hover:border-green-500 transition-all duration-300">
                                 <div class="flex justify-between items-start mb-2">
                                     <p
                                         class="text-green-500 dark:text-green-300 font-medium bg-green-500/10 px-3 py-1 rounded-full text-sm">
@@ -433,7 +412,47 @@
 </template>
 
 
-<script setup></script>
+<script setup>
+import { ref, onMounted } from 'vue';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+// Refs for sections
+const aboutSection = ref(null);
+const experienceItems = ref(null); // multiple timeline cards
+gsap.registerPlugin(ScrollTrigger);
+onMounted(() => {
+  // Animate About section (from left)
+  gsap.from(aboutSection.value, {
+     scrollTrigger: {
+      trigger: aboutSection.value,
+      start: "top 90%",
+      toggleActions: "play none none none",
+    },
+    x: -200,
+    opacity: 0,
+    duration: 1,
+    delay: 0.2,
+    ease: 'power3.out',
+  });
+
+  // Animate Skills section (fade in)
+  gsap.from(experienceItems.value, {
+     scrollTrigger: {
+      trigger: experienceItems.value,
+      start: "top 90%",
+      toggleActions: "play none none none",
+    },
+    x:200,
+    opacity: 0,
+    duration: 1,
+    delay: 0.2,
+    ease: 'power3.out',
+  });
+
+});
+</script>
+
 
 <style scoped>
 .timeline-line {

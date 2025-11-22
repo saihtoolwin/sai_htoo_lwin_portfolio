@@ -1,9 +1,37 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+const project = ref(null);
+
+onMounted(() => {
+  gsap.from(project.value, {
+    scrollTrigger: {
+      trigger: project.value,
+      onLeaveBack: () => {
+        gsap.set(project.value, { opacity: 0, y: 200 });
+      },
+      toggleActions: "play reset play reset",
+      scrub: false,
+
+    },
+    y: 200,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+});
+</script>
 <template>
-  <div class="container mx-auto  mt-10 text-white px-3">
-    <div class="p-3 md:p-6 border dark:border-gray-700/50 border-gray-300 dark:bg-gray-800/50 px-5 rounded-2xl shadow-lg backdrop-blur-sm">
+  <div ref="project" class="container mx-auto  mt-10 text-white px-3">
+    <div
+      class="p-3 md:p-6 border dark:border-gray-700/50 border-gray-300 dark:bg-gray-800/50 px-5 rounded-2xl shadow-lg backdrop-blur-sm">
       <p class=" font-bold text-2xl md:text-3xl duration-300 text-black dark:text-white">Projects</p>
       <div class="w-full flex justify-center mb-10">
-        <ul class="flex   backdrop-blur-md text-black dark:text-white dark:bg-gray-700/40 rounded-3xl border border-gray-700/30 ">
+        <ul
+          class="flex   backdrop-blur-md text-black dark:text-white dark:bg-gray-700/40 rounded-3xl border border-gray-700/30 ">
           <li v-for="tab in tabs" :key="tab" @click="activeTab = tab"
             class="relative cursor-pointer select-none px-4 py-2 text-md font-medium rounded-2xl  transition-all duration-300"
             :class="[
@@ -18,7 +46,8 @@
         </ul>
       </div>
 
-      <div v-if="activeTab == 'Web'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:mx-auto md:gap-5 gap-y-3  ">
+      <div v-if="activeTab == 'Web'"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:mx-auto md:gap-5 gap-y-3  ">
         <!-- Card 1 -->
         <div
           class="h-full flex flex-col px-4 py-2 rounded-xl overflow-hidden border dark:border-gray-700/50 border-gray-300 transform hover:scale-105 transition duration-300 motion-reduce:transform-none">
@@ -52,8 +81,9 @@
           </div>
           <!-- Bottom link -->
           <div class="mt-auto  py-2 text-right">
-            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black"
-              target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/saihtoolwin/LMS"
+              class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black" target="_blank"
+              rel="noopener noreferrer">
               See More ....
             </a>
           </div>
@@ -86,8 +116,9 @@
           </div>
           <!-- Bottom link -->
           <div class="mt-auto  py-2 text-right">
-            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black"
-              target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/saihtoolwin/LMS"
+              class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black" target="_blank"
+              rel="noopener noreferrer">
               See More ....
             </a>
           </div>
@@ -122,14 +153,15 @@
           </div>
           <!-- Bottom link -->
           <div class="mt-auto  py-2 text-right">
-            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black"
-              target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/saihtoolwin/LMS"
+              class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black" target="_blank"
+              rel="noopener noreferrer">
               See More ....
             </a>
           </div>
         </div>
 
-         <!-- Card 4 -->
+        <!-- Card 4 -->
         <div
           class="h-full flex flex-col px-4 py-2 rounded-xl overflow-hidden border dark:border-gray-700/50 border-gray-300 transform hover:scale-105 transition duration-300 motion-reduce:transform-none">
 
@@ -137,7 +169,9 @@
           <div class=" flex-grow mb-2">
             <div class="font-bold md:text-lg mb-2 text-black dark:text-white">Mandalar Second</div>
             <div class=" text-gray-600 dark:text-gray-300 text-sm md:text-md mt-1">
-              A peer-to-peer marketplace platform where users can seamlessly sell their pre-owned items and discover great deals from other sellers. Features include secure transactions, product categorization, bidding system, and real-time chat between buyers and sellers for a complete e-commerce experience.
+              A peer-to-peer marketplace platform where users can seamlessly sell their pre-owned items and discover
+              great deals from other sellers. Features include secure transactions, product categorization, bidding
+              system, and real-time chat between buyers and sellers for a complete e-commerce experience.
             </div>
 
           </div>
@@ -154,8 +188,9 @@
           </div>
           <!-- Bottom link -->
           <div class="mt-auto  py-2 text-right">
-            <a href="https://github.com/saihtoolwin/LMS" class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black"
-              target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/saihtoolwin/LMS"
+              class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black" target="_blank"
+              rel="noopener noreferrer">
               See More ....
             </a>
           </div>
@@ -164,7 +199,9 @@
       </div>
       <div class="flex justify-end mt-4 ">
         <a href="https://github.com/saihtoolwin?tab=repositories" target="_blank">
-          <p class="text-gray-600 text-sm md:text-md dark:text-gray-400 hover:text-gray-800 dark:hover:text-white mt-3 hover:scale-110 transition-transform duration-300 ">More Projects 
+          <p
+            class="text-gray-600 text-sm md:text-md dark:text-gray-400 hover:text-gray-800 dark:hover:text-white mt-3 hover:scale-110 transition-transform duration-300 ">
+            More Projects
             <i class="fa-solid fa-arrow-right"></i>
           </p>
         </a>

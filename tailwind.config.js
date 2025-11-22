@@ -7,10 +7,21 @@ module.exports = {
       colors:{
         secondary : '#33FFCC',
         bgcolor:"#102129",
-        primary:"#00B7FF"
+        primary:"#00B7FF",
+         darkbg: '#000000',
       },
       fontFamily: {
-        suse: ['"SUSE"', 'sans-serif'], // Adding the SUSE font
+        apple: [
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          'Oxygen',
+          'Ubuntu',
+          'Cantarell',
+          '"Helvetica Neue"',
+          'sans-serif'
+        ],
       },
     },
   },
