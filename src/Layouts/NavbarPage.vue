@@ -5,7 +5,7 @@
         <!-- Light mode icon -->
         <svg
           class="transition-transform duration-500   group-hover:filter group-hover:brightness-125 group-hover:drop-shadow-lg"
-          :class="!isDarkMode ? 'rotate-0 fill-secondary' : 'rotate-180 fill-yellow-500'" fill="currentColor"
+          :class="!isDarkMode ? 'rotate-0 fill-black' : 'rotate-180 fill-yellow-500'" fill="currentColor"
           viewBox="0 0 20 20">
           <path v-if="!isDarkMode" d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
           <path v-else

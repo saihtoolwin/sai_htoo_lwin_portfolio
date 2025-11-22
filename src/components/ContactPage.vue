@@ -1,8 +1,74 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+// const author = ref(null);
+const contact = ref(null);
+const contactRight = ref(null);
+// const contactSection = ref(null);
+
+onMounted(() => {
+  // Animate left side (contact info)
+  gsap.from(contact.value, {
+    scrollTrigger: {
+      trigger: contact.value,
+      // start: "top 40%",
+      //  end: "bottom 1%",
+      onLeaveBack: () => {
+        gsap.set(contact.value, { opacity: 0, y: 200 });
+      },
+      toggleActions: "play reset play reset",
+      scrub: false,
+
+    },
+    y: 200,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  // Animate right side (form)
+  gsap.from(contactRight.value, {
+    scrollTrigger: {
+      trigger: contactRight.value,
+      // onLeaveBack: () => {
+      //   gsap.set(contactRight.value, { opacity: 0, y: 200 });
+      // },
+      toggleActions: "play reset play reset",
+      scrub: false,
+
+    },
+    x: 200,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+  // gsap.from(author.value, {
+  //   scrollTrigger: {
+  //     trigger: author.value,
+  //     onLeaveBack: () => {
+  //       gsap.set(author.value, { opacity: 0, y: 200 });
+  //     },
+  //     toggleActions: "play reset play reset",
+  //     scrub: false,
+
+  //   },
+  //   y: 200,
+  //   opacity: 0,
+  //   duration: 1,
+  //   ease: "power3.out",
+  // });
+});
+</script>
+
 <template>
   <div class="container mx-auto flex flex-col items-center justify-center py-16 px-6">
-    
+
     <!-- Header -->
-    <div class="text-center mb-6 md:mb-12">
+    <div ref="contactRight" class="text-center mb-6 md:mb-12">
       <h2 class="text-xl md:text-3xl lg:text-4xl font-extrabold text-black dark:text-white mb-4">
         Let's Build Something Together 🚀
       </h2>
@@ -11,8 +77,9 @@
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-10 max-w-5xl w-full border border-gray-300 dark:bg-gray-800/50 dark:border-gray-700/50 backdrop-blur-sm rounded-2xl p-6 md:p-10 shadow-xl">
-      
+    <div ref="contact"
+      class="grid md:grid-cols-2 gap-10 max-w-5xl w-full border border-gray-300 dark:bg-gray-800/50 dark:border-gray-700/50 backdrop-blur-sm rounded-2xl p-6 md:p-10 shadow-xl">
+
       <!-- Left: Contact Info + Socials -->
       <div class="flex flex-col justify-between space-y-10">
         <div class="space-y-5">
@@ -42,35 +109,17 @@
       <!-- Right: Contact Form -->
       <form @submit.prevent="submitForm" class="space-y-5">
         <div class="grid md:grid-cols-2 gap-4">
-          <input
-            v-model="form.name"
-            type="text"
-            placeholder="Your Name"
-            required
-            class="w-full p-3 rounded-lg dark:bg-gray-900/60 border border-gray-700 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500 focus:outline-none"
-          />
-          <input
-            v-model="form.email"
-            type="email"
-            placeholder="Email Address"
-            required
-            class="w-full p-3 rounded-lg dark:bg-gray-900/60 border border-gray-700 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500 focus:outline-none"
-          />
+          <input v-model="form.name" type="text" placeholder="Your Name" required
+            class="w-full p-3 rounded-lg dark:bg-gray-900/60 border border-gray-700 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500 focus:outline-none" />
+          <input v-model="form.email" type="email" placeholder="Email Address" required
+            class="w-full p-3 rounded-lg dark:bg-gray-900/60 border border-gray-700 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500 focus:outline-none" />
         </div>
 
-        <textarea
-          v-model="form.message"
-          rows="5"
-          placeholder="Tell me about your project..."
-          required
-          class="w-full p-3 rounded-lg dark:bg-gray-900/60 border border-gray-700 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500 focus:outline-none"
-        ></textarea>
+        <textarea v-model="form.message" rows="5" placeholder="Tell me about your project..." required
+          class="w-full p-3 rounded-lg dark:bg-gray-900/60 border border-gray-700 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-sky-500 focus:outline-none"></textarea>
 
-        <button
-          type="submit"
-          :disabled="loading"
-          class="w-full py-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm md:text-lg transition shadow-lg hover:shadow-sky-400/40 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
+        <button type="submit" :disabled="loading"
+          class="w-full py-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm md:text-lg transition shadow-lg hover:shadow-sky-400/40 disabled:opacity-50 disabled:cursor-not-allowed">
           {{ loading ? 'Sending...' : 'Send Message' }}
         </button>
 
@@ -93,7 +142,6 @@
 
 <script>
 export default {
-  name: "ModernContactSection",
   data() {
     return {
       form: { name: "", email: "", message: "" },
@@ -126,24 +174,19 @@ export default {
         });
 
         if (response.ok) {
-          this.success = "✅ Message sent successfully!";
+          this.success = "✅ Your message has been sent successfully!";
           this.form = { name: "", email: "", message: "" };
         } else {
-          this.error = "❌ Failed to send message. Please try again.";
+          this.error = "⚠️ We couldn’t send your message. Please try again in a moment.";
         }
       } catch (err) {
         console.error("EmailJS Error:", err);
-        this.error = "⚠️ Something went wrong. Please try again later.";
+        this.error = "❌ Something went wrong. Please try again later.";
       } finally {
         this.loading = false;
       }
+
     },
   },
 };
 </script>
-
-<style scoped>
-button {
-  transition: all 0.25s ease;
-}
-</style>
