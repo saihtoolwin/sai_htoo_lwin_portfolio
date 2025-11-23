@@ -5,70 +5,64 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// const author = ref(null);
-const contact = ref(null);
+const contactFrom = ref(null);
 const contactRight = ref(null);
-// const contactSection = ref(null);
 
 onMounted(() => {
-  // Animate left side (contact info)
-  gsap.from(contact.value, {
-    scrollTrigger: {
-      trigger: contact.value,
-      // start: "top 40%",
-      //  end: "bottom 1%",
-      onLeaveBack: () => {
-        gsap.set(contact.value, { opacity: 0, y: 200 });
-      },
-      toggleActions: "play reset play reset",
-      scrub: false,
 
+  // LEFT SIDE
+  ScrollTrigger.create({
+    trigger: contactFrom.value,
+    start: "top bottom",
+    end: "bottom top",
+    onEnter: () => {
+      gsap.fromTo(
+        contactFrom.value,
+        { opacity: 0, y: 200 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+        }
+      );
     },
-    y: 200,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
+    onLeaveBack: () => {
+      gsap.set(contactFrom.value, { opacity: 0, y: 200 });
+    }
   });
 
-  // Animate right side (form)
-  gsap.from(contactRight.value, {
-    scrollTrigger: {
-      trigger: contactRight.value,
-      // onLeaveBack: () => {
-      //   gsap.set(contactRight.value, { opacity: 0, y: 200 });
-      // },
-      toggleActions: "play reset play reset",
-      scrub: false,
-
+  // RIGHT SIDE
+  ScrollTrigger.create({
+    trigger: contactRight.value,
+    start: "top bottom",
+    end: "bottom top",
+    onEnter: () => {
+      gsap.fromTo(
+        contactRight.value,
+        { opacity: 0, y: 200 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+        }
+      );
     },
-    x: 200,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
+    onLeaveBack: () => {
+      gsap.set(contactRight.value, { opacity: 0, y: 200 });
+    }
   });
-  // gsap.from(author.value, {
-  //   scrollTrigger: {
-  //     trigger: author.value,
-  //     onLeaveBack: () => {
-  //       gsap.set(author.value, { opacity: 0, y: 200 });
-  //     },
-  //     toggleActions: "play reset play reset",
-  //     scrub: false,
 
-  //   },
-  //   y: 200,
-  //   opacity: 0,
-  //   duration: 1,
-  //   ease: "power3.out",
-  // });
 });
 </script>
+
 
 <template>
   <div class="container mx-auto flex flex-col items-center justify-center py-16 px-6">
 
     <!-- Header -->
-    <div ref="contactRight" class="text-center mb-6 md:mb-12">
+    <div class="text-center mb-6 md:mb-12">
       <h2 class="text-xl md:text-3xl lg:text-4xl font-extrabold text-black dark:text-white mb-4">
         Let's Build Something Together 🚀
       </h2>
@@ -77,7 +71,7 @@ onMounted(() => {
       </p>
     </div>
 
-    <div ref="contact"
+    <div ref="contactFrom"
       class="grid md:grid-cols-2 gap-10 max-w-5xl w-full border border-gray-300 dark:bg-gray-800/50 dark:border-gray-700/50 backdrop-blur-sm rounded-2xl p-6 md:p-10 shadow-xl">
 
       <!-- Left: Contact Info + Socials -->
@@ -174,14 +168,14 @@ export default {
         });
 
         if (response.ok) {
-          this.success = "✅ Your message has been sent successfully!";
+          this.success = " Your message has been sent successfully!";
           this.form = { name: "", email: "", message: "" };
         } else {
           this.error = "⚠️ We couldn’t send your message. Please try again in a moment.";
         }
       } catch (err) {
         console.error("EmailJS Error:", err);
-        this.error = "❌ Something went wrong. Please try again later.";
+        this.error = "❌Something went wrong. Please try again later.";
       } finally {
         this.loading = false;
       }

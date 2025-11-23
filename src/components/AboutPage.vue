@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 ">
             <div ref="aboutSection" class=" grid">
                 <!-- About Section -->
-                <div 
+                <div
                     class="dark:bg-gray-800/50 backdrop-blur-sm border-gray-300 dark:border-gray-700/50  rounded-2xl p-3 md:p-6 shadow-md border ">
                     <h2 class=" font-bold text-2xl dark:text-white   md:text-3xl mb-3 md:mb-8 flex items-center">
                         <!-- <i class="fas fa-user mr-3 text-blue-400"></i> -->
@@ -120,7 +120,7 @@
 
                         <!-- Row 4: Tools + Mobile (combined) -->
                         <div class="bg-purple-500/10 rounded-lg p-4 border border-purple-500/20">
-                            <h3 class="text-black dark:text-white font-semibold md:text-lg mb-3">Tools & 
+                            <h3 class="text-black dark:text-white font-semibold md:text-lg mb-3">Tools &
                                 Development</h3>
                             <div class="flex flex-wrap gap-3">
 
@@ -422,33 +422,49 @@ const aboutSection = ref(null);
 const experienceItems = ref(null); // multiple timeline cards
 gsap.registerPlugin(ScrollTrigger);
 onMounted(() => {
-  // Animate About section (from left)
-  gsap.from(aboutSection.value, {
-     scrollTrigger: {
-      trigger: aboutSection.value,
-      start: "top 90%",
-      toggleActions: "play none none none",
-    },
-    x: -200,
-    opacity: 0,
-    duration: 1,
-    delay: 0.2,
-    ease: 'power3.out',
-  });
+    ScrollTrigger.create({
+        trigger: aboutSection.value,
+        start: "top 90%",
+        onEnter: () => {
+            gsap.fromTo(
+                aboutSection.value,
+                { opacity: 0, x: -200 },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    delay: 0.2,
+                    ease: "power3.out",
+                }
+            );
+        },
+        onLeaveBack: () => {
+            gsap.set(aboutSection.value, { opacity: 0, x: -200 });
+        }
+    });
 
-  // Animate Skills section (fade in)
-  gsap.from(experienceItems.value, {
-     scrollTrigger: {
-      trigger: experienceItems.value,
-      start: "top 90%",
-      toggleActions: "play none none none",
-    },
-    x:200,
-    opacity: 0,
-    duration: 1,
-    delay: 0.2,
-    ease: 'power3.out',
-  });
+
+    ScrollTrigger.create({
+        trigger: experienceItems.value,
+        start: "top 90%",
+        onEnter: () => {
+            gsap.fromTo(
+                experienceItems.value,
+                { opacity: 0, x: 200 },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    delay: 0.2,
+                    ease: "power3.out",
+                }
+            );
+        },
+        onLeaveBack: () => {
+            gsap.set(experienceItems.value, { opacity: 0, x: 200 });
+        }
+    });
+
 
 });
 </script>
