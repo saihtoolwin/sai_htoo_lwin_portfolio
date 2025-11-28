@@ -9,7 +9,7 @@
 
     <!-- Personal introduction and social icons -->
     <div class=" backdrop-blur-sm   border-gray-300 dark:border-gray-700/50 
-     rounded-2xl mt-3 text-center pb-16 px-6 
+     rounded-2xl mt-3 text-center  px-6 
      md:order-1 flex flex-col  items-center h-full">
       <NavbarPage></NavbarPage>
       <!-- Profile Image Wrapper -->
@@ -49,7 +49,7 @@
         </p>
       </div>
       <!-- Experience & Projects -->
-      <div ref="cards"  class="flex gap-8 mt-10 text-gray-700 dark:text-white">
+      <div ref="cards"  class="flex gap-8 mt-16 mb-10 text-gray-700 dark:text-white">
 
         <!-- Experience Card -->
         <div class="flex flex-col items-center min-w-[140px] px-4 py-5 rounded-xl border 

@@ -7,22 +7,29 @@ gsap.registerPlugin(ScrollTrigger);
 const project = ref(null);
 
 onMounted(() => {
-  gsap.from(project.value, {
-    scrollTrigger: {
-      trigger: project.value,
-      onLeaveBack: () => {
-        gsap.set(project.value, { opacity: 0, y: 200 });
-      },
-      toggleActions: "play reset play reset",
-      scrub: false,
-
+  ScrollTrigger.create({
+    trigger: project.value,
+   
+    onEnter: () => {
+      gsap.fromTo(
+        project.value,
+        { opacity: 0, y: 200 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+        }
+      );
     },
-    y: 200,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
+    onLeaveBack: () => {
+      gsap.set(project.value, { opacity: 0, y: 200 });
+    },
+    start: "top bottom",
+    end: "bottom top",
   });
 });
+
 </script>
 <template>
   <div ref="project" class="container mx-auto  mt-10 text-white px-3">
@@ -82,9 +89,9 @@ onMounted(() => {
           <!-- Bottom link -->
           <div class="mt-auto  py-2 text-right">
             <a href="https://github.com/saihtoolwin/LMS"
-              class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black" target="_blank"
+              class=" inline-block px-3 py-1 text-sm font-semibold dark:text-gray-200 text-black" target="_blank"
               rel="noopener noreferrer">
-              See More ....
+              See More 
             </a>
           </div>
         </div>
@@ -117,9 +124,9 @@ onMounted(() => {
           <!-- Bottom link -->
           <div class="mt-auto  py-2 text-right">
             <a href="https://github.com/saihtoolwin/LMS"
-              class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black" target="_blank"
+              class=" inline-block px-3 py-1 text-sm font-semibold dark:text-gray-200 text-black" target="_blank"
               rel="noopener noreferrer">
-              See More ....
+              See More 
             </a>
           </div>
         </div>
@@ -154,9 +161,9 @@ onMounted(() => {
           <!-- Bottom link -->
           <div class="mt-auto  py-2 text-right">
             <a href="https://github.com/saihtoolwin/LMS"
-              class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black" target="_blank"
+              class=" inline-block px-3 py-1 text-sm font-semibold dark:text-gray-200 text-black" target="_blank"
               rel="noopener noreferrer">
-              See More ....
+              See More 
             </a>
           </div>
         </div>
@@ -189,9 +196,9 @@ onMounted(() => {
           <!-- Bottom link -->
           <div class="mt-auto  py-2 text-right">
             <a href="https://github.com/saihtoolwin/LMS"
-              class="inline-block px-3 py-1 text-sm font-semibold dark:text-white text-black" target="_blank"
+              class=" inline-block px-3 py-1 text-sm font-semibold dark:text-gray-200 text-black" target="_blank"
               rel="noopener noreferrer">
-              See More ....
+              See More 
             </a>
           </div>
         </div>
