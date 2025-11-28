@@ -411,16 +411,15 @@
     </div>
 </template>
 
-
 <script setup>
 import { ref, onMounted } from 'vue';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-// Refs for sections
 const aboutSection = ref(null);
-const experienceItems = ref(null); // multiple timeline cards
+const experienceItems = ref(null);
 gsap.registerPlugin(ScrollTrigger);
+
 onMounted(() => {
     ScrollTrigger.create({
         trigger: aboutSection.value,
@@ -428,7 +427,7 @@ onMounted(() => {
         onEnter: () => {
             gsap.fromTo(
                 aboutSection.value,
-                { opacity: 0, x: -200 },
+                { opacity: 0, x: -100 },
                 {
                     opacity: 1,
                     x: 0,
@@ -437,20 +436,15 @@ onMounted(() => {
                     ease: "power3.out",
                 }
             );
-        },
-        onLeaveBack: () => {
-            gsap.set(aboutSection.value, { opacity: 0, x: -200 });
         }
     });
-
-
     ScrollTrigger.create({
         trigger: experienceItems.value,
         start: "top 90%",
         onEnter: () => {
             gsap.fromTo(
                 experienceItems.value,
-                { opacity: 0, x: 200 },
+                { opacity: 0, x: 100 },
                 {
                     opacity: 1,
                     x: 0,
@@ -459,13 +453,8 @@ onMounted(() => {
                     ease: "power3.out",
                 }
             );
-        },
-        onLeaveBack: () => {
-            gsap.set(experienceItems.value, { opacity: 0, x: 200 });
         }
     });
-
-
 });
 </script>
 
