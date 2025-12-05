@@ -423,11 +423,11 @@ gsap.registerPlugin(ScrollTrigger);
 onMounted(() => {
     ScrollTrigger.create({
         trigger: aboutSection.value,
-        start: "top 90%",
+        start: "top 100%",
         onEnter: () => {
             gsap.fromTo(
                 aboutSection.value,
-                { opacity: 0, x: -100 },
+                { opacity: 0, x: -200 },
                 {
                     opacity: 1,
                     x: 0,
@@ -440,11 +440,11 @@ onMounted(() => {
     });
     ScrollTrigger.create({
         trigger: experienceItems.value,
-        start: "top 90%",
+        start: "top 100%",
         onEnter: () => {
             gsap.fromTo(
                 experienceItems.value,
-                { opacity: 0, x: 100 },
+                { opacity: 0, x: 200 },
                 {
                     opacity: 1,
                     x: 0,
