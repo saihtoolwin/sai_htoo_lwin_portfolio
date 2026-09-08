@@ -87,7 +87,7 @@ onMounted(() => {
           </div>
           <div class="flex items-center space-x-4">
             <i class="fa-solid fa-location-dot dark:text-white text-md md:text-2xl"></i>
-            <span class="dark:text-gray-200 text-sm md:text-lg">Yangon, Myanmar</span>
+            <span class="dark:text-gray-200 text-sm md:text-lg">Bangkok, Thailand</span>
           </div>
         </div>
 

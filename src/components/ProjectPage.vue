@@ -43,8 +43,8 @@ onMounted(() => {
             class="relative cursor-pointer select-none px-4 py-2 text-md font-medium rounded-2xl  transition-all duration-300"
             :class="[
               activeTab === tab
-                ? 'bg-gray-200 dark:bg-gray-600'
-                : 'dark:text-gray-400 dark:hover:text-white hover:bg-gray-300 dark:hover:bg-gray-700/40'
+                ? 'bg-gray-300 dark:bg-gray-400'
+                : 'dark:text-gray-400 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700/40'
             ]">
             {{ tab }}
             <span v-if="activeTab === tab"
