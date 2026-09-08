@@ -180,7 +180,7 @@
                                     <p
                                         class="text-red-500 dark:text-red-300 font-medium bg-red-500/10 px-3 py-1 rounded-full text-sm">
                                         2025
-                                        April - Current
+                                        April - 2025 Jun
                                     </p>
                                     <span
                                         class="text-xs text-gray-700 border border-gray-400  dark:bg-gray-800/50 bg-white dark:text-gray-300  px-2 py-1 rounded">Full-time</span>

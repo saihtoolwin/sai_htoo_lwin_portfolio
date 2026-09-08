@@ -14,7 +14,7 @@
       <NavbarPage></NavbarPage>
       <!-- Profile Image Wrapper -->
       <div class="relative w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40">
-        <img src="../assets/profileImg/1.jpg" alt="Sai Htoo Lwin"
+        <img src="../assets/profileImg/2026-08-08 13.58.46.jpg" alt="Sai Htoo Lwin"
           class="w-full h-auto rounded-xl border-2  dark:border-gray-200 border-gray-400 object-cover shadow-[0_10px_40px_rgba(0,0,0,0.15)]" />
 
         <!-- Active Green Dot -->
